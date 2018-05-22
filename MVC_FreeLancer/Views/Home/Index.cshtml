@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    <p>@Html.ValidationSummary()</p>
+    <div>
+        <h2>Bạn muốn tải project của mình, vui lòng nhập thông tin đã được cung cấp vào đây: </h2>
+        <table>
+            <tr>
+                <td><label>Bạn là ai? #ID <input type="text" name="ID" value="" /></label></td>
+            </tr>
+            <tr>
+                <td><label>Tên #PROJECT <input type="text" name="Project" value="" /></label></td>
+            </tr>
+        </table>
+    </div>
+    <button class="btn btn-lg btn-primary">Tải PROJECT</button>
+}
+
+<a href="@Url.Action("LoginFB")"><i class="fa fa-facebook"></i>Login FB</a>
